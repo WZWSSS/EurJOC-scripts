@@ -2,12 +2,12 @@
 
   <SCOREFXNS>
     <ScoreFunction name="scorefxn_full" weights="ref2015">
-      <Reweight scoretype="coordinate_constraint" weight="0.1"/>
+      <Reweight scoretype="coordinate_constraint" weight="0.15"/>
     </ScoreFunction>
 
     <ScoreFunction name="soft_rep_full" weights="soft_rep">
-      <Reweight scoretype="coordinate_constraint" weight="0.1"/>
-      <Reweight scoretype="res_type_constraint" weight="0.1"/>
+      <Reweight scoretype="coordinate_constraint" weight="0.15"/>
+      <Reweight scoretype="res_type_constraint" weight="0.15"/>
     </ScoreFunction>
   </SCOREFXNS>
   
@@ -19,7 +19,7 @@
     <RestrictToRepacking name="rtr"/>
     <OperateOnResidueSubset name="fix_not_neighbor">
       <Not>
-        <Neighborhood distance="8">
+        <Neighborhood distance="6">
           <Index resnums="%%all_ress%%"/>
         </Neighborhood>
       </Not>
